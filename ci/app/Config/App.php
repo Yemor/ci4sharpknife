@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://example.com/';
+	public $baseURL = 'http://www.yemor.cn:80/';
 
 	/*
 	|--------------------------------------------------------------------------
