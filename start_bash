@@ -1,0 +1,2 @@
+#git clone git@github.com:Yemor/ci4sharpknife.git
+chmod -R 777 ci4sharpknife/ci/writable
