@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
 <head>
-    <title>CodeIgniter Tutorial</title>
-</head>
-<body>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <h1><?= $title; ?></h1>
+    <!-- Title -->
+    <title><?= $title; ?></title>
+</head>
