@@ -14,6 +14,10 @@ class Home extends BaseController
 		echo 'Hello';
 	}
 
+	public function echophp()
+	{
+		echo phpinfo();
+	}
 	//--------------------------------------------------------------------
 
 }

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Pages extends BaseController
+class Sharpknife extends BaseController
 {
     public $ctl_data = [];
 
@@ -52,22 +52,30 @@ class Pages extends BaseController
         // echo "<p>initController</p>" ;
         // echo json_encode($this->ctl_data);
 	}
-
-    public function view($page = 'Home')
+    public function view($page = 'networkData')
     {
-        if (!file_exists(APPPATH . '/Views/Pages/' . $page . '.php')) {
-            // Whoops, we don't have a page for that!
-            throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
-        }
+        $db = \Config\Database::connect();
+        $query = $db->query('SELECT * FROM net_sharpknife.network_flow;');
+        $results = $query->getResult();
 
-        $data = $this->ctl_data;
-        $data['title'] = $page; // Capitalize the first letter
-        
-        // echo json_encode($data);
-        echo view('Templates/Header', $data);
-        // echo view('Templates/Bootstrap', $data);
-        echo view('Pages/' . $page, $data);
-        echo view('Templates/Footer', $data);
+        echo json_encode($results);
+        // foreach ($results as $row)
+        // {
+        //     foreach ($row as $val)
+        //     {
+        //         echo $val;
+        //     }
+        // }
+
+        // echo 'Total Results: ' . count($results);
+    }
+    public function checkphp()
+    {
+        if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
+            echo 'We don\'t have mysqli!\n';
+        } else {
+            echo 'Oh yeah, we have it!';
+        }
     }
 
     //--------------------------------------------------------------------
