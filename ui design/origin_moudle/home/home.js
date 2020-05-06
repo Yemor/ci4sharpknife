@@ -5,7 +5,7 @@ var recentdata = new Vue({
             { text: "数据包编号" },
             { text: "数据内容" },
             { text: "交付时间" },
-            { text: "长度" }
+            { text: "长度(bytes)" }
         ],
         trs: [
         ]
