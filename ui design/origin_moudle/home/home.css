@@ -1,0 +1,12 @@
+.data-format{
+    vertical-align:middle;
+    text-align:center;
+    word-break: break-all;/*分行*/
+    /*white-space: nowrap;不换行用这个*/
+    overflow:hidden; /*超出部分省略号显示*/
+    text-overflow:ellipsis; /*省略号显示*/
+    display:-webkit-box;
+    -webkit-text-overflow:ellipsis; /*兼容*/
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; /*显示2行*/
+}
